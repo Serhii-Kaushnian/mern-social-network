@@ -1,0 +1,5 @@
+{
+  "env": {
+    "JWT_SECRET_KEY": "dQDyczXjdnlJlkouwl6rjy8Ex40H181x-mnjZ4XdAbctest"
+  }
+}
