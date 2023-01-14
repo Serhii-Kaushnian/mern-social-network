@@ -40,6 +40,7 @@ const initialValuesLogin = {
 };
 
 const Form = () => {
+  const REACT_APP_BASE_URL = process.env.REACT_APP_BASE_URL;
   const [pageType, setPageType] = useState('login');
   const { palette } = useTheme();
   const dispatch = useDispatch();
@@ -55,7 +56,6 @@ const Form = () => {
       formData.append(value, values[value]);
     }
     formData.append('picturePath', values.picture.name);
-  const REACT_APP_BASE_URL = process.env.REACT_APP_BASE_URL;
 
     const savedUserResponse = await fetch(`${REACT_APP_BASE_URL}/auth/register`, {
       method: 'POST',
