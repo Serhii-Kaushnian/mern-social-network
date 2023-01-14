@@ -55,8 +55,9 @@ const Form = () => {
       formData.append(value, values[value]);
     }
     formData.append('picturePath', values.picture.name);
+  const REACT_APP_BASE_URL = process.env.REACT_APP_BASE_URL;
 
-    const savedUserResponse = await fetch('http://localhost:3001/auth/register', {
+    const savedUserResponse = await fetch(`${REACT_APP_BASE_URL}/auth/register`, {
       method: 'POST',
       body: formData,
     });
